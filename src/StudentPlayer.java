@@ -140,26 +140,6 @@ public class StudentPlayer extends Player{
             }
         }
 
-        /*int startCol = max(0, col - nToConnect + 1);
-        int endCol = min(boardSize[1], col + nToConnect);
-
-        for (int c = startCol; c < endCol; c++) {
-            int xInRow = 0;
-            int oInRow = 0;
-            int emptyInRow = 0;
-            for(int i = startCol; i < nToConnect; i++){
-
-                if(state[row][i] == 1){
-                    xInRow++;
-                }else if(state[row][i] == 2){
-                    oInRow++;
-                }else{
-                    emptyInRow++;
-                }
-            }
-            score += getScore(xInRow, oInRow, emptyInRow);
-
-        }*/
         return score;
     }
 
@@ -185,24 +165,6 @@ public class StudentPlayer extends Player{
             }
         }
 
-        /*int startRow = max(0, row - nToConnect + 1);
-        int endRow = min(boardSize[0], row + nToConnect);
-
-        for (int c = startRow; c < endRow; c++) {
-            int xInRow = 0;
-            int oInRow = 0;
-            int emptyInRow = 0;
-            for(int i = startRow; i < nToConnect; i++){
-                if(state[i][col] == 1){
-                    xInRow++;
-                }else if(state[i][col] == 2){
-                    oInRow++;
-                }else{
-                    emptyInRow++;
-                }
-            }
-            score += getScore(xInRow, oInRow, emptyInRow);
-        }*/
         return score;
     }
 
@@ -228,24 +190,7 @@ public class StudentPlayer extends Player{
             }
         }
 
-        /*int stepLeftUp = min(nToConnect - 1, min(row, col));
-        int stepRightDown = min(nToConnect, min(boardSize[0] - row, boardSize[1] - col));
 
-        for (int diagonalStep = -stepLeftUp; diagonalStep < stepRightDown; diagonalStep++) {
-            int xInRow = 0;
-            int oInRow = 0;
-            int emptyInRow = 0;
-            for(int i = diagonalStep; i < nToConnect; i++){
-                if (state[row + diagonalStep][col + diagonalStep] == 1) {
-                    xInRow++;
-                }else if(state[row + diagonalStep][col + diagonalStep] == 2){
-                    oInRow++;
-                }else{
-                    emptyInRow++;
-                }
-            }
-            score += getScore(xInRow, oInRow, emptyInRow);
-        }*/
         return score;
     }
 
@@ -271,24 +216,6 @@ public class StudentPlayer extends Player{
             }
         }
 
-        /*int stepLeftDown = min(nToConnect - 1, min(boardSize[0] - row - 1, col));
-        int stepRightUp = min(nToConnect, min(row + 1, boardSize[1] - col));
-
-        for (int skewDiagonalStep = -stepLeftDown; skewDiagonalStep < stepRightUp; skewDiagonalStep++) {
-            int xInRow = 0;
-            int oInRow = 0;
-            int emptyInRow = 0;
-            for(int i = skewDiagonalStep; i < nToConnect; i++){
-                if (state[row - skewDiagonalStep][col + skewDiagonalStep] == 1) {
-                    xInRow++;
-                }else if(state[row - skewDiagonalStep][col + skewDiagonalStep] == 2){
-                    oInRow++;
-                }else{
-                    emptyInRow++;
-                }
-            }
-            score += getScore(xInRow, oInRow, emptyInRow);
-        }*/
         return score;
     }
 }
